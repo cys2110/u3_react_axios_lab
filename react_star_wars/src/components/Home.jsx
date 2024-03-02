@@ -1,7 +1,7 @@
 export default function Home () {
     return (
-        <div>
-            <h1>In a galaxy far far away</h1>
+        <div id="home">
+            <h1>A long time ago, in a galaxy far far away . . .</h1>
         </div>
     )
 }
