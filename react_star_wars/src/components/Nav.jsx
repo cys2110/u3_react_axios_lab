@@ -2,16 +2,14 @@ import {Link} from 'react-router-dom'
 
 export default function Nav() {
     return (
-        <div>
-            <ul id="nav">
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/films">Films</Link></li>
-                <li><Link to="/planets">Planets</Link></li>
-                <li><Link to="/species">Species</Link></li>
-                <li><Link to="/people">People</Link></li>
-                <li><Link to="/starships">Starships</Link></li>
-                <Link to="/vehicles">Vehicles</Link>
-            </ul>
+        <div id='nav'>
+            <Link className='nav' to="/">Home</Link>
+            <Link className='nav' to="/films">Films</Link>
+            <Link className='nav' to="/planets">Planets</Link>
+            <Link className='nav' to="/species">Species</Link>
+            <Link className='nav' to="/people">People</Link>
+            <Link className='nav' to="/starships">Starships</Link>
+            <Link className='nav' to="/vehicles">Vehicles</Link>
         </div>
     )
 }

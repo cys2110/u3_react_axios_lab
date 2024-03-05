@@ -38,13 +38,13 @@ export default function VehicleList (props) {
         return <h1>Retrieving from a galaxy far far away</h1>
     } else {
         return (
-            <div>
+            <div className="container">
                 <h1>Vehicles</h1>
-                <ul>
-                    {vehicles.map((vehicle) => (
-                        <li key={vehicle.name} onClick={()=>showVehicle(vehicle.name)}>{vehicle.name}</li>
-                    ))}
-                </ul>
+                <div className="list">
+                    {vehicles.map(vehicle =>
+                        <p className="link" key={vehicle.name} onClick={()=>showVehicle(vehicle.name)}>{vehicle.name}</p>
+                    )}
+                </div>
             </div>
         )
     }

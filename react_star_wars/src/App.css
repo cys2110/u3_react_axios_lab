@@ -1,19 +1,86 @@
 @import url('https://fonts.googleapis.com/css2?family=Overlock+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
 
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-  height: 100vw;
   font-family: "Overlock SC", sans-serif;
+  height: 100vh;
+  width: 100vw;
+  font-size: 20px;
+  margin: 2%;
+}
+
+#nav {
+  text-align: center;
+}
+
+.nav {
+  padding: 1%
 }
 
 #home {
-  height: fit-content;
-  margin-top: 30%
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
 }
 
-#nav li {
-  display: inline;
+#home-image {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.poster {
+  border-radius: 5%;
+  cursor: pointer;
+}
+
+.poster:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 11px rgb(132, 130, 130);
+}
+
+.link {
+  color: #646cff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.return-list {
+  text-align: right;
+  margin-top: 10%
+}
+
+.details-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: left;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.left-container, .right-container {
+  padding-left: 20%;
+  padding-right: 20%
+}
+
+dd {
+  font-family: "Overlock", sans-serif;
 }

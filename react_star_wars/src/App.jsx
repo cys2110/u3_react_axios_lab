@@ -8,7 +8,7 @@ import {BASE_URL} from '../globals'
 function App() {
 
   return (
-    <div>
+    <div id="app">
       <Header />
       <Main apiCall={BASE_URL}/>
     </div>

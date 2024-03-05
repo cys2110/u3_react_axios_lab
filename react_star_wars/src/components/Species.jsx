@@ -37,13 +37,13 @@ export default function SpeciesList (props) {
         return <h1>Retrieving from a galaxy far far away</h1>
     } else {
         return (
-            <div>
+            <div className="container">
                 <h1>Species</h1>
-                <ul>
-                    {species.map((species) => (
-                        <li key={species.name} onClick={()=>showSpecies(species.name)}>{species.name}</li>
-                    ))}
-                </ul>
+                <div className="list">
+                    {species.map(species => 
+                        <p className="link" key={species.name} onClick={()=>showSpecies(species.name)}>{species.name}</p>
+                    )}
+                </div>
             </div>
         )
     }

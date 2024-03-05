@@ -52,15 +52,15 @@ export default function Planet() {
         return <h1>Retrieving from a galaxy far far away</h1>
     } else {
         return (
-            <div>
-                <Link to='/planets'>Return to list of planets</Link>
+            <div className="container">
+                
                 <h1>{planet.name}</h1>
 
-                <details>
-                    <summary>Profile</summary>
+                <div className="details-container">
+                    <div className="left-container">
                     <dl>
                         <dt>Population</dt>
-                        <dd>{planet.population === 'unknown' ? 'Data unknown' : planet.population}</dd>
+                        <dd>{planet.population === 'unknown' ? 'Data unavailable' : planet.population}</dd>
 
                         <dt>Residents</dt>
                         {residents.length === 0 ? 'Data unavailable' : residents.map(resident => (
@@ -72,33 +72,33 @@ export default function Planet() {
                             <dd key={film.title}><Link to={`/films/${film.title}`}>{film.title}</Link></dd>
                         ))}
                     </dl>
-                </details>
-
-                <details>
-                    <summary>Geology</summary>
+                    </div>
+                    <div className="right-container">
                     <dl>
                         <dt>Rotation period</dt>
-                        <dd>{planet.rotation_period === 'unknown' ? 'Data unknown' : planet.rotation_period}</dd>
+                        <dd>{planet.rotation_period === 'unknown' ? 'Data unavailable' : planet.rotation_period}</dd>
 
                         <dt>Orbital period</dt>
-                        <dd>{planet.orbital_period === 'unknown' ? 'Data unknown' : planet.orbita_period}</dd>
+                        <dd>{planet.orbital_period === 'unknown' ? 'Data unavailable' : planet.orbital_period}</dd>
 
                         <dt>Diameter</dt>
-                        <dd>{planet.diameter === 'unknown' ? 'Data unknown' : planet.diameter}</dd>
+                        <dd>{planet.diameter === 'unknown' ? 'Data unavailable' : planet.diameter}</dd>
 
                         <dt>Climate</dt>
-                        <dd>{planet.climate === 'unknown' ? 'Data unknown' : planet.climate}</dd>
+                        <dd>{planet.climate === 'unknown' ? 'Data unavailable' : planet.climate}</dd>
 
                         <dt>Gravity</dt>
-                        <dd>{planet.gravity === 'unknown' ? 'Data unknown' : planet.gravity}</dd>
+                        <dd>{planet.gravity === 'unknown' ? 'Data unavailable' : planet.gravity}</dd>
 
                         <dt>Terrain</dt>
-                        <dd>{planet.terrain === 'unknown' ? 'Data unknown' : planet.terrain}</dd>
+                        <dd>{planet.terrain === 'unknown' ? 'Data unavailable' : planet.terrain}</dd>
 
                         <dt>Surface water</dt>
-                        <dd>{planet.surface_water === 'unknown' ? 'Data unknown' : planet.surface_water}</dd>
+                        <dd>{planet.surface_water === 'unknown' ? 'Data unavailable' : `${planet.surface_water}%`}</dd>
                     </dl>
-                </details>
+                    </div>
+                </div>
+                <Link className="return-list" to='/planets'>Return to list of planets</Link>
             </div>
         )
     }

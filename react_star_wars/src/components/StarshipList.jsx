@@ -38,13 +38,13 @@ export default function StarshipList (props) {
         return <h1>Retrieving from a galaxy far far away</h1>
     } else {
         return (
-                <div>
+                <div className="container">
                     <h1>Starships</h1>
-                    <ul>
-                        {starships.map((starship) => (
-                            <li key={starship.name} onClick={()=>showShip(starship.name)}>{starship.name}</li>
-                        ))}
-                    </ul>
+                    <div className="list">
+                        {starships.map(starship =>
+                            <p className="link" key={starship.name} onClick={()=>showShip(starship.name)}>{starship.name}</p>
+                        )}
+                    </div>
                 </div>
         )
     }

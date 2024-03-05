@@ -38,13 +38,13 @@ export default function PlanetList (props) {
         return <h1>Retrieving from a galaxy far far away</h1>
     } else {
         return (
-            <div>
+            <div className="container">
                 <h1>Planets</h1>
-                <ul>
-                    {planets.map((planet) => (
-                        <li key={planet.name} onClick={() => showPlanet(planet.name)}>{planet.name}</li>
-                    ))}
-                </ul>
+                <div className="list">
+                    {planets.map(planet => 
+                        <p className="link" key={planet.name} onClick={() => showPlanet(planet.name)}>{planet.name}</p>
+                    )}
+                </div>
             </div>
         )
     }

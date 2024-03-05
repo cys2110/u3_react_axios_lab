@@ -38,13 +38,13 @@ export default function PeopleList (props) {
         return <h1>Retrieving from a galaxy far far away</h1>
     } else {
         return (
-            <div>
+            <div className="container">
                 <h1>People</h1>
-                <ul>
-                    {people.map((person) => (
-                        <li key={person.name} onClick={()=>showPerson(person.name)}>{person.name}</li>
-                    ))}
-                </ul>
+                <div className="list">
+                    {people.map(person =>
+                        <p className="link" key={person.name} onClick={()=>showPerson(person.name)}>{person.name}</p>
+                    )}
+                </div>
             </div>
         )
     }
